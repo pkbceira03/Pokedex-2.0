@@ -1,10 +1,10 @@
 import Header from "../../components/header/header"
 
-export default function Pokedex(){
+export default function Localizacao(){
     return(
         <div>
             <Header/>
-            <p>pokedex</p>
+            <p>localizacao</p>
         </div>
     );
 }

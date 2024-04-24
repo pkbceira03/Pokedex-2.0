@@ -1,0 +1,29 @@
+.center{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+}
+
+
+.logo{
+    background-image: url("../../../images/logo.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 3% 10%;
+}
+
+.menuPricipal{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu{
+    position: center;
+    color: black;
+    padding: 1vw;
+    background-color: aquamarine;
+    border-radius: 50px;
+    margin: 1vh 1vh 1vh 1vh;
+}
+    
