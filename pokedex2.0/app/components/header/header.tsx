@@ -9,7 +9,7 @@ export default function Header(){
             <div className={styles.menuPrincipal}>
                 <Link href="/pages/pokedex" className={styles.menu}>Pokedex</Link>
                 <Link href="/pages/ataque" className={styles.menu}>Ataque</Link>
-                <Link href="/pages/evolucao" className={styles.menu}>linha evoilutiva</Link>
+                <Link href="/pages/evolucao" className={styles.menu}>Linha Evolutiva</Link>
                 <Link href="/pages/localizacao" className={styles.menu}>Localização</Link>
             </div>
         </div>

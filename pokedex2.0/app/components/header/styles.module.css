@@ -18,12 +18,20 @@
     justify-content: space-around;
 }
 
+
 .menu{
-    position: center;
     color: black;
     padding: 1vw;
     background-color: aquamarine;
     border-radius: 50px;
     margin: 1vh 1vh 1vh 1vh;
+    justify-items:center;
+    text-decoration: none;
+}
+
+.menu:hover{
+    color:aliceblue;
+    background-color: brown;
+
 }
     
