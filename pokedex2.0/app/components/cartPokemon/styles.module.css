@@ -1,0 +1,19 @@
+.card{
+    flex-wrap: wrap;
+    border-radius: 10px;
+    width: calc(100%/5 - 4%);
+    margin: 20px 2%;
+    background-color: rgb(230,230,230);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card p{
+    color: black;
+    font-size: 21px;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
