@@ -40,8 +40,13 @@ export default function CartPokemon(props:any){
         if (response.data.types.length > 0) {
             const primaryType = response.data.types[0].type.name;
             setCardColor(typeColors[primaryType] || "#fff");
-            const secondyType = response.data.types[1].type.name;
-            setSecondyColor(typeColors[secondyType] || "#fff");
+            const secondyType = response.data.types?.[1]?.type?.name;
+            if (secondyType && secondyType !== 'NULL') {
+                setSecondyColor(typeColors[secondyType] || "#fff");
+            } else {
+                setSecondyColor("#fff"); 
+            }
+
         }
 
     }
@@ -57,8 +62,14 @@ export default function CartPokemon(props:any){
             <p>{props.name}</p>
             <div className={styles.typePokemon}>
             {typePokemon.map((val:any, index: number)=>{
+                let backgroundColor;
+                if (typePokemon.length === 1) {
+                    backgroundColor = cardColor;
+                } else {
+                    backgroundColor = index === 0 ? secondyColor : cardColor;
+                }
                 return <p 
-                            style={{ backgroundColor: index === 0 ? secondyColor : cardColor }}
+                            style={{ backgroundColor }}
                         >
                             {val.type.name}
                         </p>

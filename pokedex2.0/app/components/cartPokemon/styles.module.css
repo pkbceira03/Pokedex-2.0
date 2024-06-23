@@ -10,7 +10,7 @@
 }
 
 .card p{
-    color: black;
+    color: white;
     font-size: 21px;
     text-align: center;
     padding: 10px 0;
@@ -26,7 +26,9 @@
 .typePokemon p{
     background-color: blue;
     border-radius: 20px;
-    color: black;
+    color: white;
     width: 40%;
-    margin: 1%;
+    margin: 2%;
+    border: 1px solid;
+    border-color: white;
 }
