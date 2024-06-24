@@ -53,7 +53,6 @@ export default function CartPokemon(props:any){
 
     useEffect(()=>{
         getPokemon();
-        console.log(typePokemon)
     }, [])
 
     return(

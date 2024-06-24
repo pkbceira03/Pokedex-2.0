@@ -16,6 +16,7 @@ export default function Pokedex(){
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${LIMIT}&offset=${offset}`);
         const data = response.data;
         setPokemon(data.results);
+        console.log(pokemon)
         setTotal(data.count);
     }
 
