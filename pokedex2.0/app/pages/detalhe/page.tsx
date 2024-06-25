@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import DetalhesPokemon from "@/app/components/detalhesPokemon/detalhesPokemon";
 
+import styles from "./styles.module.css";
+
 export default function Detalhes(){
     const [pokemon, setPokemon] = useState<String>("");
     const [detalhesPokemon, setDetalhesPokemon] = useState<any>(null)
@@ -31,7 +33,7 @@ export default function Detalhes(){
                 />
                 <button type="submit">Pesquisar</button>
             </form>
-            <div>
+            <div className={styles.center}>
                 {detalhesPokemon ?
                     <DetalhesPokemon detalhes={detalhesPokemon}/>
                     :(
