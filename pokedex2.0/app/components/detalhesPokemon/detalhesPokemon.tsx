@@ -54,93 +54,96 @@ export default function DetalhesPokemon(props: any) {
         <div>
             <div className={styles.container}>
                 <div className={styles.center}>
-                    <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
-                        <p>{props.detalhes.name}</p>
-                        <img src={props.detalhes.sprites.front_default} alt={`${props.detalhes.name} front`} />
-                        <div className={styles.typePokemon}>
-                            {typePokemon.map((val:any, index: number)=>{
-                                let backgroundColor;
-                                if (typePokemon.length === 1) {
-                                    backgroundColor = cardColor;
-                                } else {
-                                    backgroundColor = index === 0 ? secondaryColor : cardColor;
-                                }
-                                return <p 
-                                            style={{ backgroundColor }}
-                                        >
-                                            {val.type.name}
-                                        </p>
-                            })}
+                <div className={styles.detalhesBox}>
+                        <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
+                            <p>{props.detalhes.name}</p>
+                            <img src={props.detalhes.sprites.front_default} alt={`${props.detalhes.name} front`} />
+                            <div className={styles.typePokemon}>
+                                {typePokemon.map((val:any, index: number)=>{
+                                    let backgroundColor;
+                                    if (typePokemon.length === 1) {
+                                        backgroundColor = cardColor;
+                                    } else {
+                                        backgroundColor = index === 0 ? secondaryColor : cardColor;
+                                    }
+                                    return <p 
+                                                style={{ backgroundColor }}
+                                            >
+                                                {val.type.name}
+                                            </p>
+                                })}
+                            </div>
+                        </div>
+                    
+                        <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
+                            <p>Forma brilhante</p>
+                            <img src={props.detalhes.sprites.front_shiny} alt={`${props.detalhes.name} shiny front`} />
+                            <div className={styles.typePokemon}>
+                                {typePokemon.map((val:any, index: number)=>{
+                                    let backgroundColor;
+                                    if (typePokemon.length === 1) {
+                                        backgroundColor = cardColor;
+                                    } else {
+                                        backgroundColor = index === 0 ? secondaryColor : cardColor;
+                                    }
+                                    return <p 
+                                                style={{ backgroundColor }}
+                                            >
+                                                {val.type.name}
+                                            </p>
+                                })}
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
-                        <p>Forma brilhante</p>
-                        <img src={props.detalhes.sprites.front_shiny} alt={`${props.detalhes.name} shiny front`} />
-                        <div className={styles.typePokemon}>
-                            {typePokemon.map((val:any, index: number)=>{
-                                let backgroundColor;
-                                if (typePokemon.length === 1) {
-                                    backgroundColor = cardColor;
-                                } else {
-                                    backgroundColor = index === 0 ? secondaryColor : cardColor;
-                                }
-                                return <p 
-                                            style={{ backgroundColor }}
-                                        >
-                                            {val.type.name}
-                                        </p>
-                            })}
+                    <div>
+                    {props.detalhes.sprites.front_female !== null ? (
+                        <div className={styles.detalhesBox}>
+                            <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
+                                <p>Pokemon feminino</p>
+                                <img src={props.detalhes.sprites.front_female} alt={`${props.detalhes.name} female front`} />
+                                <div className={styles.typePokemon}>
+                                    {typePokemon.map((val:any, index: number)=>{
+                                        let backgroundColor;
+                                        if (typePokemon.length === 1) {
+                                            backgroundColor = cardColor;
+                                        } else {
+                                            backgroundColor = index === 0 ? secondaryColor : cardColor;
+                                        }
+                                        return <p 
+                                                    style={{ backgroundColor }}
+                                                >
+                                                    {val.type.name}
+                                                </p>
+                                    })}
+                                </div>
+                            </div>
+                            <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
+                                <p>Pokemon feminino brilhante</p>
+                                <img src={props.detalhes.sprites.front_shiny_female} alt={`${props.detalhes.name} shiny female front`} />
+                                <div className={styles.typePokemon}>
+                                    {typePokemon.map((val:any, index: number)=>{
+                                        let backgroundColor;
+                                        if (typePokemon.length === 1) {
+                                            backgroundColor = cardColor;
+                                        } else {
+                                            backgroundColor = index === 0 ? secondaryColor : cardColor;
+                                        }
+                                        return <p 
+                                                    style={{ backgroundColor }}
+                                                >
+                                                    {val.type.name}
+                                                </p>
+                                    })}
+                                </div>
+                            </div>
                         </div>
+                    ) : (
+                        <p style={{ display: 'none' }}>O masculino e feminino são iguais</p>
+                    )}
                     </div>
                 </div>
-                {props.detalhes.sprites.front_female !== null ? (
-                    <div>
-                        <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
-                            <p>Pokemon feminino</p>
-                            <img src={props.detalhes.sprites.front_female} alt={`${props.detalhes.name} female front`} />
-                            <div className={styles.typePokemon}>
-                                {typePokemon.map((val:any, index: number)=>{
-                                    let backgroundColor;
-                                    if (typePokemon.length === 1) {
-                                        backgroundColor = cardColor;
-                                    } else {
-                                        backgroundColor = index === 0 ? secondaryColor : cardColor;
-                                    }
-                                    return <p 
-                                                style={{ backgroundColor }}
-                                            >
-                                                {val.type.name}
-                                            </p>
-                                })}
-                            </div>
-                        </div>
-                        <div className={styles.detalhes} style={{ backgroundColor: cardColor }}>
-                            <p>Pokemon feminino brilhante</p>
-                            <img src={props.detalhes.sprites.front_shiny_female} alt={`${props.detalhes.name} shiny female front`} />
-                            <div className={styles.typePokemon}>
-                                {typePokemon.map((val:any, index: number)=>{
-                                    let backgroundColor;
-                                    if (typePokemon.length === 1) {
-                                        backgroundColor = cardColor;
-                                    } else {
-                                        backgroundColor = index === 0 ? secondaryColor : cardColor;
-                                    }
-                                    return <p 
-                                                style={{ backgroundColor }}
-                                            >
-                                                {val.type.name}
-                                            </p>
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                ) : (
-                    <p style={{ display: 'none' }}>O masculino e feminino são iguais</p>
-                )}
-            </div>
-
-            <Ability ability={abilities} move={props.detalhes.moves}/>
-            
+                <Ability ability={abilities} move={props.detalhes.moves} name={props.detalhes.name}/>
+            </div> 
         </div>
     );
 }

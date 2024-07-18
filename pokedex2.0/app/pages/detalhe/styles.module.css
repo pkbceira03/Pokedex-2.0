@@ -1,7 +1,9 @@
 .center{
     display: flex;
     background-color: red;
-    width: 100%;
+    width: 94%;
     justify-content: space-between;
     flex-direction: column;
+    margin: 3%;
+    border-radius: 20px;
 }

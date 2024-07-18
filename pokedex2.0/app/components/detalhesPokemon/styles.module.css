@@ -1,26 +1,39 @@
 .container {
     display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    flex-direction: row; 
-    width: 100%; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 2%;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detalhesBox{
+    display: flex;
+    flex-direction: row;
 }
 
 .detalhes {
-    flex: 1; 
-    min-width: 200px; 
-    box-sizing: border-box; 
+    flex: 1;
+    min-width: 200px;
+    box-sizing: border-box;
     text-align: center;
     border-radius: 10px;
-    margin: 20px 2%;
     padding: 2%;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    width: 40%;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
 }
+
 
 .detalhes img {
     width: 100%; 
